@@ -24,7 +24,7 @@ MySQL免安装版安装方法如下
 
 当然，使用高版本工具（如MySQL 8+Navicat for MySQL 16）也是可以滴，安装版相比绿色版（免安装版）在配置上会简单一点，但我更倾向于选择绿色版（方便卸载）。
 对于数据库建模，还有PowerDesigner可选，但是我嫌弃它界面不友好，上手成本高，因此没有选择。
-## 🕘 1.1 PDManer 简介
+## 🕘 2.1 PDManer 简介
 
 > PDManer元数建模，是一款多操作系统开源免费的桌面版关系数据库模型建模工具，相对于PowerDesigner，他具备界面简洁美观，操作简单，上手容易等特点。
 > 主要功能如下：
@@ -44,7 +44,7 @@ MySQL免安装版安装方法如下
 当然这款软件可以直接生成SQL脚本，但个人实测下来，能用但是有点小bug，因此后面还是要用Navicat微调，值得注意的是，这个软件不能设置外键（即脚本没有相关生成），关系图中可以靠连线表示。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/f7a638b4617f4e10b9f06944a3589b28.png)
 
-## 🕘 1.2 Navicat 简介
+## 🕘 2.2 Navicat 简介
 在配置好你的mysql环境之后，将你设置的账号、密码、端口号（3306）在Navicat设置连接上，就可以愉快的使用啦。
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/a90ca17d9dcb44c1a396137977464d28.png)
@@ -56,7 +56,7 @@ MySQL免安装版安装方法如下
 - RESTRICT：如果想要删除父表的记录时，而在子表中有关联该父表的记录，则不允许删除父表中的记录；
 - NO ACTION：同 RESTRICT，也是首先先检查外键；
 
-## 🕘 1.3 VS2019
+## 🕘 2.3 VS2019
 新建C++项目 -> 平台改为X64 -> 右键项目属性
 VC++目录 -> 包含目录 -> 编辑 -> mysql安装文件中`include`文件夹路径放进去
 库目录 -> 编辑 -> mysql安装文件中`lib`文件夹路径放进去
@@ -69,12 +69,12 @@ VC++目录 -> 包含目录 -> 编辑 -> mysql安装文件中`include`文件夹�
 在mysql的`lib`文件夹中找到`libmysql.dll`，把它拷贝一份到`C:\Windows\System32`
 依照惯例，新建`.h`、`.cpp`、`main.cpp`文件，就可以写代码啦。
 
-## 🕘 1.4 EasyX 简介
+## 🕘 2.4 EasyX 简介
 > EasyX Graphics Library 是针对 Visual C++ 的免费绘图库，支持 VC6.0 ~ VC2022，简单易用，学习成本极低，应用领域广泛。目前已有许多大学将 EasyX 应用在教学当中。
 > 
 这里就简单介绍一下相关的函数
 
-### 🕤 1.4.1 窗口
+### 🕤 2.4.1 窗口
 关于坐标：坐标原点在窗口的左上角，X 轴向右为正，Y 轴向下为正，度量单位是像素。
 ```cpp
 initgraph(1080, 720); // 初始化窗口
@@ -88,7 +88,7 @@ setbkmode(TRANSPARENT); // 设置文字背景透明
 closegraph();		 // 关闭图形模式
 ```
 
-### 🕤 1.4.2 文字处理
+### 🕤 2.4.2 文字处理
 
 ```cpp
  // 绘制欢迎文字
@@ -139,7 +139,7 @@ outtextxy(855, 190 + i * 30, magprice);
 
 
 
-### 🕤 1.4.3 对话框/弹窗
+### 🕤 2.4.3 对话框/弹窗
 如果需要从对话框输入文字存入变量，就需要下面的转换函数
 ```cpp
 //wchar_t转化为string
@@ -196,7 +196,7 @@ else {
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/a7628919d5f04d28875875f12f837ddb.png)
 
 更多选项可参考文档
-### 🕤 1.4.4 鼠标点击
+### 🕤 2.4.4 鼠标点击
 以上面的登录选项为例
 
 ```cpp
@@ -231,7 +231,7 @@ while (true)
 
 
 
-## 🕘 1.5 辅助工具：cursor
+## 🕘 2.5 辅助工具：cursor
 
 
 [video(video-vQOjMMZZ-1679842080558)(type-bilibili)(url-https://player.bilibili.com/player.html?aid=993756518)(image-https://img-blog.csdnimg.cn/img_convert/798f7b6fdfc3111737aa3572189b5670.jpeg)(title-又火一个ChatGPT软件，完全免费！但问题也很明显)]
